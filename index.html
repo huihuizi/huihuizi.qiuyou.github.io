@@ -3,81 +3,80 @@
 	<head>
 		<meta charset="UTF-8">
 		<title></title>
-		<style type="text/css">
+		<style>
+			body{
+				-webkit-perspective: 3000;
+			}
 			.box{
-				width:400px;
-				height:400px;
-				border:1px solid skyblue;
+				width:200px;
+				height:200px;
+				/*border:1px solid skyblue;*/
 				position:absolute;
 				left:50%;
 				top:50%;
-				margin:-200px 0 0 -200px;
-				-webkit-perspective: 55000;	 	/*视距*/
+				margin-top:160px;
 				transform-style: preserve-3d;
-				animation: name 2s linear infinite;
+				animation: name 4s linear infinite;
 			}
 			@-webkit-keyframes name{
 				from{transform: rotateX(0) rotateX(0);}
-				to{transform: rotate(360deg) rotateX(360deg)}
+				to{transform: rotate(360deg) rotateX(360deg);}
 			}
 			.box>div{
-				width:400px;
-				height:400px;
-				position: absolute;
+				width:200px;
+				height:200px;
+				position:absolute;
 				top:0;
 				left:0;
 				text-align: center;
-				line-height: 400px;
+				line-height: 200px;
 				font-size: 30px;
-				color: white;
 				transition: all 2s linear;
 			}
 			.box>div:nth-of-type(1){
 				background:wheat;
 				/*opacity: 0;*/
-				transform:translateZ(-200px);
+				transform: translateZ(-100px);
 			}
 			.box>div:nth-of-type(2){
 				background:skyblue;
-				transform: rotateX(90deg) translateZ(200px);
+				transform: rotateX(90deg) translateZ(100px);
 			}
 			.box>div:nth-of-type(3){
-				background:lavender;
-				transform: rotateX(90deg) translateZ(-200px);
+				background:lemonchiffon;
+				transform: rotateX(90deg) translateZ(-100px);
 			}
 			.box>div:nth-of-type(4){
 				background:silver;
-				transform: rotateY(90deg) translateZ(200px);
+				transform: rotateY(90deg) translateZ(100px);
 			}
 			.box>div:nth-of-type(5){
-				background:seashell;
-				transform: rotateY(90deg) translateZ(-200px);
+				background:aqua;
+				transform: rotateY(90deg) translateZ(-100px);
 			}
 			.box>div:nth-of-type(6){
-				background:aquamarine;
+				background:lavender;
 				/*opacity: 0;*/
-				transform:translateZ(200px);
+				transform: translateZ(100px);
 			}
 			.box:hover div:nth-of-type(1){
-				transform:translateZ(-400px);
+				transform: translateZ(-200px);
 			}
 			.box:hover div:nth-of-type(6){
-				transform:translateZ(400px);
+				transform: translateZ(200px);
 			}
 			.box:hover div:nth-of-type(2){
-				transform:rotateX(90deg) translateZ(400px);
-			}
-			.box:hover div:nth-of-type(5){
-				transform:rotateY(90deg) translateZ(-400px);
+				transform:rotateX(90deg)  translateZ(200px);
 			}
 			.box:hover div:nth-of-type(3){
-				transform:rotateX(90deg) translateZ(-400px);
+				transform:rotateX(90deg) translateZ(-200px);
 			}
 			.box:hover div:nth-of-type(4){
-				transform:rotateY(90deg) translateZ(400px);
+				transform:rotateY(90deg)  translateZ(200px);
 			}
-			
-			
+			.box:hover div:nth-of-type(5){
+				transform:rotateY(90deg) translateZ(-200px);
+			}
 		</style>
 	</head>
 	<body>
@@ -91,4 +90,5 @@
 		</div>
 	</body>
 </html>
+
 
